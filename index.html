@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ThinkOmni: Lifting Textual Reasoning to Omni-modal Scenarios via Guidance Decoding">
+  <meta name="keywords" content="ThinkOmni, Omni-modal, Reasoning, LLM, ICLR 2026">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThinkOmni: Lifting Textual Reasoning to Omni-modal Scenarios via Guidance Decoding</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            <span style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">ThinkOmni</span>: 
+            Lifting Textual Reasoning to Omni-modal Scenarios via Guidance Decoding
+          </h1>
+
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?user=1Gx_r4wAAAAJ&hl=zh-CN">Yiran Guan</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=o1y5dm8AAAAJ">Sifan Tu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Tre69v0AAAAJ">Dingkang Liang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=sVX-CCEAAAAJ">Linghao Zhu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=W1sZaQ0AAAAJ">Jianzhong Ju</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Sh6y-_EAAAAJ">Zhenbo Luo</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=6Z8RUi4AAAAJ">Jian Luan</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=9uPDtI4AAAAJ">Yuliang Liu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=UeltiQ4AAAAJ">Xiang Bai</a><sup>1†</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Huazhong University of Science and Technology</span>
+            <span class="author-block"><sup>2</sup>MiLM Plus, Xiaomi Inc.</span>
+            <h2 class="title is-3" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">ICLR 2026</h2>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Project Page Link.
+              <span class="link-block">
+                <a href="https://1ranguan.github.io/thinkomni" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-link"></i>
+                  </span>
+                  <span>Project Page</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser Image Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <center>
+            <!-- Replace with Figure 1 from the PDF -->
+            <img src="./static/images/fig1.png" alt="ThinkOmni Teaser" width="100%">
+          </center>
+          <p class="caption">
+            <strong>Figure 1: Comparison between existing methods and ThinkOmni.</strong> 
+            We integrate an OLLM with an LRM via guidance decoding, enabling advanced reasoning abilities with omni-modal input without additional training.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Omni-modal reasoning is essential for intelligent systems to understand and draw inferences from diverse data sources. While existing Omni-modal Large Language Models (OLLM) excel at perceiving diverse modalities, they lack the complex reasoning abilities of recent Large Reasoning Models (LRM). However, enhancing the reasoning ability of OLLMs through additional training presents significant challenges, including the need for high-quality data, task-specific adaptation, and substantial computational costs.
+          </p>
+          <p>
+            To address these limitations, we propose <strong>ThinkOmni</strong>, a training-free framework that lifts textual reasoning to omni-modal scenarios. ThinkOmni introduces two key components: 
+            1) <strong>LRM-as-a-Guide</strong>, which leverages off-the-shelf LRMs to guide the OLLM decoding process; 
+            2) <strong>Stepwise Contrastive Scaling</strong>, which adaptively balances perception and reasoning signals without manual hyperparameter tuning.
+          </p>
+          <p>
+            Experiments on six multi-modality reasoning benchmarks demonstrate that ThinkOmni consistently delivers performance improvements, with main results achieving 70.2% on MathVista and 75.5% on MMAU. Overall, ThinkOmni offers a flexible and generalizable solution for omni-modal reasoning and provides new insights into the generalization and application of reasoning capabilities.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Method Overview. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
+          <center>
+            <!-- Replace with Figure 4 from the PDF -->
+            <img src="./static/images/pipeline.png" alt="ThinkOmni Framework" width="100%">
+          </center> 
+          <p>
+            <strong>Overview of ThinkOmni.</strong> The framework begins by separating input modalities of the OLLM and introducing the LRM as a guiding model. 
+            <strong>Stepwise Contrastive Scaling</strong> dynamically adjusts guidance parameters based on real-time prediction analysis, enabling adaptive and effective decoding across diverse tasks.
+          </p>
+          <p>
+            Specifically, we employ a guidance decoding strategy where the OLLM provides the base multi-modal understanding. To inject reasoning capabilities, we treat the LRM's output as a positive guide while using the OLLM's text-only output as a negative reference. This process effectively amplifies the reasoning signal within the decoding process.
+          </p>
+          <p>
+            Crucially, rather than applying a fixed weight to this guidance, our method utilizes <strong>Stepwise Contrastive Scaling</strong>. This module dynamically balances the influence of perception (from the OLLM) and reasoning (from the LRM) at every token generation step by measuring the divergence between their probability distributions. This ensures the model relies on reasoning when logic is required, and on perception when processing multi-modal details.
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+
+  
+
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Performance Comparison</h3>
+          <p>
+            Extensive experiments conducted on six challenging multi-modal reasoning benchmarks (MathVista, MathVision, MathVerse, MMAU, DailyOmni, OmniBench) demonstrate the effectiveness of our method.
+          </p>
+          <center>
+            <!-- Replace with Table 1 from the PDF -->
+            <img src="./static/images/result.png" alt="Main Results Table" width="90%">
+          </center>
+          <p>
+             ThinkOmni improves the OLLM Qwen2.5-Omni by substantial margins without additional training, rivaling or surpassing models that undergo extensive Reinforcement Fine-Tuning (RFT).
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{guan2026thinkomni,
+  title={ThinkOmni: Lifting Textual Reasoning to Omni-modal Scenarios via Guidance Decoding},
+  author={Guan, Yiran and Tu, Sifan and Liang, Dingkang and Zhu, Linghao and Ju, Jianzhong and Luo, Zhenbo and Luan, Jian and Liu, Yuliang and Bai, Xiang},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2026}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This website template was borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
