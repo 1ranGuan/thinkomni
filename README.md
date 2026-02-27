@@ -5,15 +5,12 @@ Instead of additional finetuning, ThinkOmni integrates an off-the-shelf LRM at *
 
 - **arXiv**: https://arxiv.org/abs/2602.23306
 
----
-
 ## Highlights
 
 - **Training-free omni-modal reasoning boost**: no SFT/RFT required.
 - **LRM-as-a-Guide**: uses an off-the-shelf reasoning LLM to guide OLLM decoding.
 - **Stepwise Contrastive Scaling (SCS)**: automatically adjusts guidance strength step-by-step.
 
----
 
 
 Full code will be open-sourced under the **[xiaomi-research](https://github.com/xiaomi-research)**. Please stay tuned!
