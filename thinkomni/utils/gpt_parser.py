@@ -12,12 +12,6 @@ from utils.model_parser import (
     build_wemath_extract_prompt
 )
 
-GPT_URL = "http://10.221.105.108:48099/generate"
-GPT_HEADERS = {
-    "Content-Type": "application/json",
-    "X-API-Key": "35198cc7-22f1-4fdd-a9c4-326c2efe5f9e"  # 替换为您的API密钥
-}
-
 def chat_by_gpt(prompt, system_prompt="You are a helpful assistant.", temperature=0.0):
     payload = {
         "model": "gpt-4o",
