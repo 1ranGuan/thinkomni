@@ -1,4 +1,4 @@
-# ThinkOmni: Lifting Textual Reasoning to Omni-modal Scenarios via Guidance Decoding (ICLR 2026)
+# ThinkOmni: Lifting Textual Reasoning to Omni-modal Scenarios via Guidance Decoding
 
 ThinkOmni is a **training-free** framework that enhances **omni-modal LLMs (OLLMs)** with the **reasoning ability of large reasoning models (LRMs)** via **guidance decoding**.  
 Instead of additional finetuning, ThinkOmni integrates an off-the-shelf LRM at **decoding time** and adaptively balances perception vs. reasoning signals for robust multi-modal reasoning.
@@ -11,7 +11,48 @@ Instead of additional finetuning, ThinkOmni integrates an off-the-shelf LRM at *
 - **LRM-as-a-Guide**: uses an off-the-shelf reasoning LLM to guide OLLM decoding.
 - **Stepwise Contrastive Scaling (SCS)**: automatically adjusts guidance strength step-by-step.
 
-<!-- Full code will be open-sourced under the **[xiaomi-research](https://github.com/xiaomi-research)**. Please stay tuned! -->
+## Installation
+
+### Set up environment
+
+```bash
+# clone
+git clone https://github.com/1ranGuan/thinkomni.git
+cd thinkomni
+
+# create environment
+conda create -n thinkomni python=3.10 -y
+conda activate thinkomni
+
+# install packages
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip install -r requirements.txt
+pip install flash-attn --no-build-isolation
+```
+
+### Prepare data
+
+- The scripts use HuggingFace datasets (for example: MathVista / MathVerse / MathVision).
+- Some datasets are expected in local folders. You can download them from https://huggingface.co/datasets/Catalan258/thinkomni_eval
+  - `./dataset/MMAU`
+  - `./dataset/OmniBench`
+  - `./dataset/Daily-Omni`
+
+## Quick Start
+
+### Inference
+
+```bash
+bash scripts/inference.sh
+```
+
+### Evaluation
+
+Set your API URL / key in `scripts/eval.sh`, then run:
+
+```bash
+bash scripts/eval.sh
+```
 
 ## Citation
 

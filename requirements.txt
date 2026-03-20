@@ -1,0 +1,11 @@
+transformers==4.52.3
+datasets
+torch
+pillow
+tqdm
+requests
+numpy
+pandas
+latex2sympy2
+mathruler
+qwen-omni-utils[decord]
